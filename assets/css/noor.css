@@ -1,0 +1,195 @@
+/* Noor Hamwy site styles: home, about, and fieldwork pages */
+
+:root {
+  --ink: #222;
+  --muted: #666;
+  --line: #e4e4e4;
+  --bg: #fff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+a { color: inherit; }
+
+/* Header: small name, simple centered menu */
+.site-header {
+  text-align: center;
+  padding: 56px 20px 28px;
+}
+
+.site-name {
+  margin: 0 0 22px;
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-name a { text-decoration: none; }
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site-nav a { text-decoration: none; }
+.site-nav a:hover { text-decoration: underline; }
+.site-nav a[aria-current="page"] { color: var(--muted); }
+
+/* Home hero band. Put a wide photo at images/hero.jpg and it will show behind the name. */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42vh;
+  min-height: 260px;
+  background-color: #d9e2ec;
+  background-image: url("/images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.hero h1 {
+  position: relative;
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  color: #111;
+}
+
+/* Home intro: text on the left, arched portrait on the right */
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 56px;
+  max-width: 900px;
+  margin: 72px auto 96px;
+  padding: 0 24px;
+}
+
+.intro-text {
+  max-width: 320px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.intro-text p { margin: 0 0 1em; }
+
+.arch-photo {
+  display: block;
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 110px 110px 0 0;
+}
+
+/* Inner pages (about, fieldwork) */
+.page {
+  max-width: 680px;
+  margin: 40px auto 96px;
+  padding: 0 24px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.page h1 {
+  margin: 0 0 2rem;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.page p { margin: 0 0 1.1em; }
+
+.page .arch-photo {
+  margin: 0 auto 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 22px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.btn:hover { background: #444; }
+
+/* Fieldwork page */
+.region { margin: 56px 0 0; }
+
+.region h2 {
+  margin: 0 0 0.2em;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.region .meta {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.entry {
+  margin: 0 0 2.5rem;
+}
+
+.entry img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.entry figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.notice {
+  margin-top: 3.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Narrow screens: stack the home intro with the photo first */
+@media (max-width: 700px) {
+  .intro {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 36px;
+  }
+
+  .intro-text { max-width: 100%; }
+}

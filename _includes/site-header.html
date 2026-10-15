@@ -1,0 +1,9 @@
+<header class="site-header">
+  <p class="site-name"><a href="/">Noor Hamwy</a></p>
+  <nav class="site-nav" aria-label="Main">
+    <a href="/about/"{% if include.current == "about" %} aria-current="page"{% endif %}>About</a>
+    <a href="/fieldwork/"{% if include.current == "fieldwork" %} aria-current="page"{% endif %}>Fieldwork</a>
+    <a href="https://docs.google.com/document/d/1TB81aMdt3IeddFhpBIHp1Ft8B8cKMbrtwHGI-LajsA4/edit?usp=sharing" target="_blank" rel="noopener">CV</a>
+    <a href="mailto:nhamwy@wisc.edu">Contact</a>
+  </nav>
+</header>

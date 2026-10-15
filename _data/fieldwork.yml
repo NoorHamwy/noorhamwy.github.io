@@ -1,0 +1,21 @@
+# Fieldwork entries for the Fieldwork page.
+#
+# To add an item:
+#   1. Put the image in images/fieldwork/ (for example images/fieldwork/djerba-01.jpg).
+#   2. Add an entry under the right region, copying the format below.
+#   3. Set show: true when the item is cleared for publication.
+#
+# Set show: false to hide an item without deleting it.
+#
+# Add a new region by copying the Tunisia block and changing its name.
+
+regions:
+  - name: Tunisia
+    local_name: "تونس"
+    years: "2026"
+    items:
+      - image: "/images/fieldwork/example.jpg"
+        caption: "Example caption. Describe what the photo shows and any context the reader needs."
+        place: "Djerba"
+        date: "2026"
+        show: false

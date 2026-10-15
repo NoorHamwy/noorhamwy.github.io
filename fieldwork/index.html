@@ -1,0 +1,12 @@
+--- layout: none --- {% include site-header.html current="fieldwork" %}
+Fieldwork
+I did fieldwork in Tunisia's National Archives in the months of September and October of 2026. This page shares photos and documents from that work.
+{% for region in site.data.fieldwork.regions %}
+{{ region.name }}{% if region.local_name %} {{ region.local_name }}{% endif %}
+{{ region.years }}
+{% for item in region.items %} {% unless item.show == false %}
+
+{{ item.place }}, {{ item.date }}. {{ item.caption }}
+{% endunless %} {% endfor %}
+{% endfor %}
+Some material on this page is shared with permission. Photos show people only where they agreed to be pictured. Documents are shared under the terms of the archive that holds them. For questions about any item, email nhamwy@wisc.edu.
