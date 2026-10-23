@@ -197,4 +197,5 @@ a { color: inherit; }
   width: 100%;
   max-width: 420px;
   height: auto;
+  border-radius: 500px 500px 0 0;
 }
