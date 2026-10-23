@@ -193,3 +193,8 @@ a { color: inherit; }
 
   .intro-text { max-width: 100%; }
 }
+.arch-photo {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
