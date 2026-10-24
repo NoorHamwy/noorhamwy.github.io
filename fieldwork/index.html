@@ -1,26 +1,74 @@
---- layout: none --- {% include site-header.html current="fieldwork" %}
-Fieldwork photograph
-Fieldwork
-My fieldwork for this research began in Tunisia, followed by research in the UK (2026), France (2027), and Qatar.
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fieldwork | Noor Hamwy</title>
+  <meta name="description" content="Fieldwork for Noor Hamwy's research on ethnic riots and political violence, beginning in Tunisia." />
+  <link rel="stylesheet" href="/assets/css/noor.css" />
+  <style>
+    body { background: #fdfcfa; }
+    .fw-banner { width: 100%; height: 70vh; min-height: 380px; overflow: hidden; }
+    .fw-banner img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .fw-wrap { max-width: 860px; margin: 0 auto; padding: 56px 24px 96px; font-family: Georgia, "Times New Roman", serif; color: #2b2623; line-height: 1.7; }
+    .fw-wrap h1 { text-align: center; font-weight: normal; font-size: 2.4rem; margin: 0 0 0.6em; }
+    .fw-wrap h2 { font-weight: normal; font-size: 1.6rem; margin: 2.4em 0 0.6em; padding-top: 0.6em; border-top: 1px solid #e6e1da; }
+    .fw-wrap p { margin: 0 0 1em; }
+    .fw-timeline { list-style: none; padding: 0; margin: 0 0 1.5em; }
+    .fw-timeline li { padding: 0.25em 0; }
+    .fw-timeline .when { color: #7a3b2e; margin-right: 0.6em; }
+    .fw-item { margin: 2.2em 0; }
+    .fw-item img { display: block; width: 100%; height: auto; margin-bottom: 0.8em; }
+    .fw-item .meta { font-size: 0.9rem; color: #6b625c; margin: 0; }
+    .fw-notes { margin-top: 3em; padding: 1.4em 1.6em; background: #f5f1eb; font-size: 0.95rem; }
+    .fw-notes p:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  {% include site-header.html current="fieldwork" %}
 
-Tunisia Archival and field research on intergroup violence.
-UK, 2026
-France, 2027
-Qatar
-{% for region in site.data.fieldwork.regions %}
-{{ region.name }}{% if region.local_name %} ({{ region.local_name }}){% endif %}{% if region.years %}, {{ region.years }}{% endif %}
-{% for item in region.items %} {% unless item.show == false %}
-{% if item.image %}{{ item.caption | escape }}{% endif %}
-{{ item.place }}, {{ item.date }}
+  <div class="fw-banner">
+    <img src="/assets/img/fieldwork-hero.jpg" alt="Fieldwork photograph" />
+  </div>
 
-{{ item.caption }}
+  <main class="fw-wrap">
+    <h1>Fieldwork</h1>
 
-{% if item.file %}
-View document
+    <p>My fieldwork for this research began in Tunisia, followed by research in the UK (2026), France (2027), and Qatar.</p>
 
-{% endif %}
-{% endunless %} {% endfor %}
-{% endfor %}
-Some material on this page is shared with permission. Photos show people only where they agreed to be pictured. Documents are shared under the terms of the archive that holds them.
+    <ol class="fw-timeline">
+      <li><span class="when">Tunisia</span> Archival and field research on intergroup violence.</li>
+      <li><span class="when">UK, 2026</span></li>
+      <li><span class="when">France, 2027</span></li>
+      <li><span class="when">Qatar</span></li>
+    </ol>
 
-For questions about any item, email nhamwy@wisc.edu.
+    {% for region in site.data.fieldwork.regions %}
+    <section>
+      <h2>{{ region.name }}{% if region.local_name %} ({{ region.local_name }}){% endif %}{% if region.years %}, {{ region.years }}{% endif %}</h2>
+
+      {% for item in region.items %}
+        {% unless item.show == false %}
+        <figure class="fw-item">
+          {% if item.image %}<img src="{{ item.image }}" alt="{{ item.caption | escape }}" loading="lazy" />{% endif %}
+          <figcaption>
+            <p class="meta">{{ item.place }}, {{ item.date }}</p>
+            <p>{{ item.caption }}</p>
+            {% if item.file %}<p><a href="{{ item.file }}" target="_blank" rel="noopener">View document</a></p>{% endif %}
+          </figcaption>
+        </figure>
+        {% endunless %}
+      {% endfor %}
+    </section>
+    {% endfor %}
+
+    <aside class="fw-notes">
+      <p>Some material on this page is shared with permission. Photos show people only where they agreed to be pictured. Documents are shared under the terms of the archive that holds them.</p>
+      <p>For questions about any item, email <a href="mailto:nhamwy@wisc.edu">nhamwy@wisc.edu</a>.</p>
+    </aside>
+  </main>
+</body>
+</html>
