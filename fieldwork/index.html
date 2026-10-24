@@ -1,12 +1,26 @@
 --- layout: none --- {% include site-header.html current="fieldwork" %}
+Fieldwork photograph
 Fieldwork
-I did fieldwork in Tunisia's National Archives in the months of September and October of 2026. This page shares photos and documents from that work.
-{% for region in site.data.fieldwork.regions %}
-{{ region.name }}{% if region.local_name %} {{ region.local_name }}{% endif %}
-{{ region.years }}
-{% for item in region.items %} {% unless item.show == false %}
+My fieldwork for this research began in Tunisia, followed by research in the UK (2026), France (2027), and Qatar.
 
-{{ item.place }}, {{ item.date }}. {{ item.caption }}
+Tunisia Archival and field research on intergroup violence.
+UK, 2026
+France, 2027
+Qatar
+{% for region in site.data.fieldwork.regions %}
+{{ region.name }}{% if region.local_name %} ({{ region.local_name }}){% endif %}{% if region.years %}, {{ region.years }}{% endif %}
+{% for item in region.items %} {% unless item.show == false %}
+{% if item.image %}{{ item.caption | escape }}{% endif %}
+{{ item.place }}, {{ item.date }}
+
+{{ item.caption }}
+
+{% if item.file %}
+View document
+
+{% endif %}
 {% endunless %} {% endfor %}
 {% endfor %}
-Some material on this page is shared with permission. Photos show people only where they agreed to be pictured. Documents are shared under the terms of the archive that holds them. For questions about any item, email nhamwy@wisc.edu.
+Some material on this page is shared with permission. Photos show people only where they agreed to be pictured. Documents are shared under the terms of the archive that holds them.
+
+For questions about any item, email nhamwy@wisc.edu.
