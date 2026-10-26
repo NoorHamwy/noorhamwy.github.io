@@ -1,10 +1,58 @@
-About
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Noor Hamwy</title>
+  <meta name="description" content="About Noor Hamwy, fourth-year PhD candidate in Political Science at the University of Wisconsin–Madison." />
+  <link rel="stylesheet" href="/assets/css/noor.css" />
+  <style>
+    body { background: #fdfcfa; }
+    .ab-wrap { max-width: 1000px; margin: 0 auto; padding: 48px 24px 96px; font-family: Georgia, "Times New Roman", serif; color: #2b2623; line-height: 1.7; }
+    .ab-grid { display: grid; grid-template-columns: minmax(280px, 400px) 1fr; gap: 56px; align-items: start; }
+    .ab-photo { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 999px 999px 16px 16px; display: block; }
+    .ab-wrap h1 { font-weight: normal; font-size: 2.6rem; margin: 0 0 0.2em; }
+    .ab-role { color: #7a3b2e; margin: 0 0 1.5em; }
+    .ab-wrap p { margin: 0 0 1.1em; max-width: 60ch; }
+    .ab-links { margin-top: 1.8em; }
+    .ab-links a { color: #7a3b2e; margin-right: 18px; }
+    .ab-links a.btn { display: inline-block; padding: 10px 20px; background: #2b2623; color: #fdfcfa; text-decoration: none; border-radius: 6px; }
+    @media (max-width: 760px) {
+      .ab-grid { grid-template-columns: 1fr; gap: 32px; }
+      .ab-photo { max-width: 360px; margin: 0 auto; }
+      .ab-wrap h1 { font-size: 2.1rem; text-align: center; }
+      .ab-role { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  {% include site-header.html current="about" %}
 
-Noor Hamwy
-I am a fourth-year PhD candidate in Political Science at the University of Wisconsin–Madison. My research focuses on nationalism and political violence among minority communities. My research combines geocoding and qualitative interviews to understand what fuels, and what limits, violence and nationalist mobilization, with a focus on the MENA region.
+  <main class="ab-wrap">
+    <div class="ab-grid">
+      <img class="ab-photo" src="/ME.jpg" alt="Noor Hamwy" />
 
-Prior to graduate school, I worked as a Research Associate at Carnegie Mellon University in Qatar, where I coauthored publications in Globalisation, Societies and Education and sustainability. I hold an MPP from Hamad Bin Khalifa University (Qatar Foundation) and a BA in Economics and Public Health from the University of Washington. I speak Arabic, English, and intermediate Hebrew.
+      <section>
+        <h1>Noor Hamwy</h1>
+        <p class="ab-role">Fourth-year PhD candidate in Political Science, University of Wisconsin–Madison</p>
 
-You can find my latest CV below. To get in touch, please email nhamwy@wisc.edu.
+        <p>I am a fourth-year PhD candidate in Political Science at the University of Wisconsin–Madison. My research focuses on nationalism and political violence among minority communities.</p>
 
-Download CV
+        <p>My work combines geocoding and qualitative interviews to understand what fuels, and what limits, violence and nationalist mobilization, with a focus on the MENA region.</p>
+
+        <p>Before graduate school, I was a Research Associate at Carnegie Mellon University in Qatar, where I coauthored publications in Globalisation, Societies and Education, and sustainability. I hold an MPP from Hamad Bin Khalifa University (Qatar Foundation) and a BA in Economics and Public Health from the University of Washington.</p>
+
+        <p>I speak Arabic, English, and intermediate Hebrew.</p>
+
+        <p class="ab-links">
+          <a class="btn" href="https://docs.google.com/document/d/1TB81aMdt3IeddFhpBIHp1Ft8B8cKMbrtwHGI-LajsA4/edit?usp=sharing" target="_blank" rel="noopener">Download CV</a>
+          <a href="mailto:nhamwy@wisc.edu">Email</a>
+        </p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
