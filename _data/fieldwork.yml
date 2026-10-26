@@ -1,21 +1,10 @@
-# Fieldwork entries for the Fieldwork page.
-#
-# To add an item:
-#   1. Put the image in images/fieldwork/ (for example images/fieldwork/djerba-01.jpg).
-#   2. Add an entry under the right region, copying the format below.
-#   3. Set show: true when the item is cleared for publication.
-#
-# Set show: false to hide an item without deleting it.
-#
-# Add a new region by copying the Tunisia block and changing its name.
-
 regions:
   - name: Tunisia
-    local_name: "تونس"
-    years: "2026"
+    years: 2026
     items:
-      - image: "/images/fieldwork/example.jpg"
-        caption: "Example caption. Describe what the photo shows and any context the reader needs."
-        place: "Djerba"
+      - place: Tunis
         date: "2026"
-        show: false
+        image: /assets/img/tunisia-boucherie.jpg
+        alt: Kosher butcher shop in Tunis
+        caption: '<a href="https://www.google.com/search?kgmid=%2Fg%2F11g8xj5hcl" target="_blank" rel="noopener">Kosher butcher shop</a> in Tunis, near the Great Synagogue of Tunis, photographed in 2026.'
+        show: true
