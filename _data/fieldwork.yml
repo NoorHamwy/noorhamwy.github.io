@@ -8,3 +8,10 @@ regions:
         alt: Kosher butcher shop in Tunis
         caption: '<a href="https://www.google.com/search?kgmid=%2Fg%2F11g8xj5hcl" target="_blank" rel="noopener">Kosher butcher shop</a> in Tunis, near the Great Synagogue of Tunis, photographed in 2026.'
         show: true
+
+          - place: Tunis
+        date: "2026"
+        image: /assets/img/tunisia-boucherie-wall.jpg
+        alt: Painted Arabic text on a wall beside a shuttered butcher shop in Tunis
+        caption: 'Faded text painted on the wall beside the shutter: "butcher" (جزار), "kosher" (كشير), and "beef" (لحم بقري).''
+        show: true    
