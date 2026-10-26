@@ -53,7 +53,7 @@ layout: none
       {% for item in region.items %}
         {% unless item.show == false %}
         <figure class="fw-item">
-          {% if item.image %}<img src="{{ item.image }}" alt="{{ item.caption | escape }}" loading="lazy" />{% endif %}
+          {% if item.image %}<img src="{{ item.image }}" alt="{{ item.alt | default: item.place }}" loading="lazy" />{% endif %}
           <figcaption>
             <p class="meta">{{ item.place }}, {{ item.date }}</p>
             <p>{{ item.caption }}</p>
